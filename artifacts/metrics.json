@@ -1,0 +1,22 @@
+{
+  "metrics": {
+    "accuracy": 0.752,
+    "f1": 0.7327586206896551,
+    "roc_auc": 0.8325440000000001,
+    "n_train": 750,
+    "n_test": 250,
+    "threshold": 0.5,
+    "target_definition": "HighAmount = (Credit amount > median 2319.5)",
+    "model": "Logistic Regression"
+  },
+  "confusion_matrix": [
+    [
+      103,
+      22
+    ],
+    [
+      40,
+      85
+    ]
+  ]
+}

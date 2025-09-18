@@ -1,0 +1,25 @@
+{
+  "numeric_features": [
+    "Age",
+    "Job",
+    "Duration"
+  ],
+  "categorical_features": [
+    "Sex",
+    "Housing",
+    "Saving accounts",
+    "Checking account",
+    "Purpose"
+  ],
+  "all_features": [
+    "Age",
+    "Sex",
+    "Job",
+    "Housing",
+    "Saving accounts",
+    "Checking account",
+    "Duration",
+    "Purpose"
+  ],
+  "target": "HighAmount"
+}
