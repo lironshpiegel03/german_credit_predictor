@@ -1,80 +1,108 @@
-# Credit Amount Prediction
+# German Credit Predictor
 
-This project predicts whether a credit amount is considered **High** or **Low** based on customer features, using machine learning.  
+A machine learning project for predicting whether a credit amount is
+considered **High** or **Low**, based on customer and financial
+attributes.\
+The app is built with **Streamlit**, and the model is trained and
+evaluated using scikit-learn.
 
-## 📂 Project Structure
+------------------------------------------------------------------------
+
+## Features
+
+-   Data preprocessing and feature engineering.
+-   Training and evaluation of ML models.
+-   Metrics: Accuracy, F1-score, ROC-AUC.
+-   Visualization of model performance:
+    -   ROC Curve
+    -   Confusion Matrix
+    -   Precision-Recall Curve
+-   Streamlit app for interactive predictions.
+
+------------------------------------------------------------------------
+
+## Installation
+
+Clone the repository:
+
+``` bash
+git clone https://github.com/lironshpiegel03/german_credit_predictor.git
+cd german_credit_predictor
 ```
-credit_project/
-│── app/                 # Streamlit app
-│   └── app.py           # Main application script
-│── models/              # Trained models (if applicable)
-│── notebooks/           # Jupyter notebooks for EDA & experiments
-│── requirements.txt     # Dependencies
-│── README.md            # Project documentation
+
+Create a virtual environment:
+
+``` bash
+python -m venv .venv
+.venv\Scripts\activate   # On Windows
 ```
 
-## 🚀 How to Run
+Install dependencies:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/credit_project.git
-   cd credit_project/app
-   ```
+``` bash
+pip install -r requirements.txt
+```
 
-2. Create a virtual environment and activate it:
-   ```bash
-   python -m venv .venv
-   .venv\Scripts\activate   # Windows
-   source .venv/bin/activate # Mac/Linux
-   ```
+Run the Streamlit app:
 
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+``` bash
+streamlit run app/app.py
+```
 
-4. Run the Streamlit app:
-   ```bash
-   streamlit run app.py
-   ```
+------------------------------------------------------------------------
 
----
-
-## 📊 Model Performance
-
-- **Accuracy:** 0.75  
-- **F1-score:** 0.73  
-- **ROC-AUC:** 0.83  
-- **Train size:** 750  
-- **Test size:** 250  
-- **Target Definition:** `HighAmount = (Credit amount > median 2319.5)`
-
----
-
-## 📈 Evaluation Results
+## Model Evaluation
 
 ### ROC Curve
+
 ![ROC Curve](images/roc_curve.png)
 
-### Confusion Matrix (Threshold = 0.5)
-![Confusion Matrix](images/confusion_matrix.png)
+### Confusion Matrix (Full Test Set)
+
+![Confusion Matrix 1](images/confusion_matrix1.png)
+
+### Confusion Matrix (Balanced Subset)
+
+![Confusion Matrix 2](images/confusion_matrix2.png)
 
 ### Precision-Recall Curve
+
 ![Precision Recall](images/precision_recall.png)
 
----
+------------------------------------------------------------------------
 
-## 🔧 Tech Stack
-- **Python 3.11+**
-- **Streamlit** – Interactive web application  
-- **Scikit-learn** – Machine learning models  
-- **Matplotlib/Seaborn** – Visualization  
-- **Pandas/Numpy** – Data processing  
+## Streamlit App
 
----
+![App Screenshot](images/app_screenshot.png)
 
-## 📌 Next Steps
-- Hyperparameter tuning (GridSearch / RandomizedSearch).  
-- Feature engineering for better accuracy.  
-- Deployment to cloud (Streamlit Cloud / Heroku / AWS).  
-- Add Docker support.  
+------------------------------------------------------------------------
+
+## Project Structure
+
+    credit_project/
+    │── app/
+    │   └── app.py
+    │── src/
+    │   └── train.py
+    │── requirements.txt
+    │── README.md
+    │── images/
+    │   ├── roc_curve.png
+    │   ├── confusion_matrix1.png
+    │   ├── confusion_matrix2.png
+    │   ├── precision_recall.png
+    │   └── app_screenshot.png
+
+------------------------------------------------------------------------
+
+## Results
+
+-   **Accuracy**: \~0.75\
+-   **F1 Score**: \~0.73\
+-   **ROC-AUC**: \~0.83
+
+------------------------------------------------------------------------
+
+## License
+
+This project is licensed under the MIT License.
